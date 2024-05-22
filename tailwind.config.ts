@@ -8,6 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      gridTemplateRows: {
+        '20': 'repeat(20, minmax(0, 1fr))',
+        '15': 'repeat(15, minmax(0, 1fr))',
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
