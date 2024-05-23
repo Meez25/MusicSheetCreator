@@ -57,8 +57,6 @@
 <!-- ABOUT THE PROJECT -->
 ## A propos du projet
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
 Je voulais une solution simple pour créer des partitions colorées, notamment pour l'apprentissage de la musique pour les enfants. J'ai donc créé cette application web qui permet de créer des partitions de musique avec des couleurs.
 
 Voici ce que vous pouvez faire avec cette application:
@@ -157,9 +155,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Yann BRONNER - [@your_twitter](https://www.linkedin.com/in/yannbronner/)
+Yann BRONNER - [@LinkedIn](https://www.linkedin.com/in/yannbronner/)
 
-Project Link: [https://github.com/Meez25/ParitionCreator](https://github.com/Meez25/PartitionCreator)
+Project Link: [https://github.com/Meez25/PartitionCreator](https://github.com/Meez25/PartitionCreator)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -191,7 +189,7 @@ Project Link: [https://github.com/Meez25/ParitionCreator](https://github.com/Mee
 [issues-shield]: https://img.shields.io/github/issues/Meez25/PartitionCreator.svg?style=for-the-badge
 [issues-url]: https://github.com/Meez25/PartitionCreator/issues
 [license-shield]: https://img.shields.io/github/license/Meez25/PartitionCreator.svg?style=for-the-badge
-[license-url]: https://github.com/Meez25/PartitionCreator/blob/master/LICENSE.txt
+[license-url]: https://github.com/Meez25/PartitionCreator/blob/main/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/yannbronner/
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
