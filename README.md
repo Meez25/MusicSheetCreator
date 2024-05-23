@@ -85,7 +85,7 @@ Voici ce que vous pouvez faire avec cette application:
 
 * npm
   ```sh
-  npm install npm@latest -g
+  npm install yarn -g
   ```
 
 ### Installation
@@ -97,11 +97,11 @@ Voici ce que vous pouvez faire avec cette application:
    ```
 2. Installer les packages
    ```sh
-   npm install
+   yarn install
    ```
 3. Démarrer le serveur
    ```sh
-    npm run dev
+    yarn run dev
     ```
 <p align="right">(<a href="#readme-top">retour en haut</a>)</p>
 
