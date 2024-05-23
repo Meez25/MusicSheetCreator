@@ -1,19 +1,19 @@
 import { useState } from "react";
 
 const ColorList = [
-  "fill-green-500",
+  "fill-green-600",
   "fill-red-500",
-  "fill-blue-500",
-  "fill-yellow-500",
-  "fill-pink-500",
-  "fill-purple-500",
+  "fill-blue-300",
+  "fill-yellow-300",
+  "fill-pink-300",
+  "fill-purple-400",
   "fill-orange-500",
-  "stroke-green-500",
+  "stroke-green-600",
   "stroke-red-500",
-  "stroke-blue-500",
-  "stroke-yellow-500",
-  "stroke-pink-500",
-  "stroke-purple-500",
+  "stroke-blue-300",
+  "stroke-yellow-300",
+  "stroke-pink-300",
+  "stroke-purple-400",
   "stroke-orange-500",
   "stroke-2",
 ]
@@ -23,17 +23,17 @@ const Note: React.FC<{ color: string }> = ({ color }) => {
   if (color.startsWith("border-")) {
     formattedColor = color.replace("border-", "fill-");
     return (
-      <svg className={`${formattedColor} z-10`} viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="100" cy="70" rx="100" ry="70" className={formattedColor} />
-        <circle cx="100" cy="70" r="60" fill="white" />
+      <svg className={`${formattedColor} z-10 flex-none`} width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="24" cy="24" rx="24" ry="20" className={formattedColor} />
+        <circle cx="24" cy="24" r="15" fill="white" />
       </svg>
     )
   }
   else if (color.startsWith("bg-")) {
     formattedColor = color.replace("bg-", "fill-");
     return (
-      <svg className={`${formattedColor} z-10`} viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="100" cy="70" rx="100" ry="70" />
+      <svg className={`${formattedColor} z-10 flex-none`} width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="24" cy="24" rx="24" ry="20" />
       </svg>
     )
   }
@@ -42,11 +42,6 @@ const Note: React.FC<{ color: string }> = ({ color }) => {
 const Cell: React.FC<{ borderBottom?: boolean, selectColor: string }> = ({ borderBottom, selectColor }) => {
   const [clicked, setClicked] = useState<boolean>(false);
   const [assignedColor, setAssignedColor] = useState<string>("");
-
-  const isABorderColor = (assignedColor: string) => {
-    if (assignedColor === "") return false;
-    return assignedColor.startsWith("border-");
-  };
 
   const handleOnClick = () => {
     if (!selectColor) {
@@ -62,7 +57,9 @@ const Cell: React.FC<{ borderBottom?: boolean, selectColor: string }> = ({ borde
       className="relative h-6 w-6 border box-border flex items-center justify-center"
     >
       {borderBottom && <div className="absolute box-content bg-black min-h-[2px] w-6"></div>}
-      {clicked && <Note color={assignedColor} />}
+      {clicked &&
+        <Note color={assignedColor} />
+      }
 
     </div>
   );

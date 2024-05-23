@@ -7,8 +7,8 @@ import { Grid } from "./Grid";
 export const Board: React.FC = () => {
   const [selectedColor, setSelectedColor] = useState<string>("");
 
-  const bgColors = ["bg-blue-500", "bg-red-500", "bg-yellow-500", "bg-green-500", "bg-orange-500", "bg-purple-500", "bg-pink-500"];
-  const borderColors = ["border-blue-500", "border-red-500", "border-yellow-500", "border-green-500", "border-orange-500", "border-purple-500", "border-pink-500"];
+  const bgColors = ["bg-blue-300", "bg-red-500", "bg-yellow-300", "bg-green-600", "bg-orange-500", "bg-purple-400", "bg-pink-300", "bg-black"];
+  const borderColors = ["border-blue-300", "border-red-500", "border-yellow-300", "border-green-600", "border-orange-500", "border-purple-400", "border-pink-300", "border-black"];
 
   return (
     <>
