@@ -66,7 +66,7 @@ Voici ce que vous pouvez faire avec cette application:
 * Les supprimer en recliquant dessus
 * Imprimer avec le navigateur internet ou faites une capture d'écran
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">retour en haut</a>)</p>
 
 
 
@@ -74,7 +74,7 @@ Voici ce que vous pouvez faire avec cette application:
 
 * [![Next][Next.js]][Next-url]
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">retour en haut</a>)</p>
 
 
 
@@ -103,7 +103,7 @@ Voici ce que vous pouvez faire avec cette application:
    ```sh
     npm run dev
     ```
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">retour en haut</a>)</p>
 
 
 
@@ -112,7 +112,7 @@ Voici ce que vous pouvez faire avec cette application:
 
 Utilisez cette application pour créer des partitions de musique colorées pour les enfants et imprimer le résultat.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">retour en haut</a>)</p>
 
 
 
@@ -120,7 +120,7 @@ Utilisez cette application pour créer des partitions de musique colorées pour 
 ## Roadmap
 
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">retour en haut</a>)</p>
 
 
 
@@ -139,16 +139,16 @@ N'oubliez pas de donner une étoile au projet ! Merci encore !
 5. Ouvrez une pull request
 
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">retour en haut</a>)</p>
 
 
 
 <!-- LICENSE -->
-## License
+## Licence
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distribué sous la licence MIT. Voir `LICENSE.txt` pour plus d'informations.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">retour en haut</a>)</p>
 
 
 
@@ -159,7 +159,7 @@ Yann BRONNER - [@LinkedIn](https://www.linkedin.com/in/yannbronner/)
 
 Project Link: [https://github.com/Meez25/PartitionCreator](https://github.com/Meez25/PartitionCreator)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">retour en haut</a>)</p>
 
 
 <!-- ACKNOWLEDGMENTS -->
@@ -174,7 +174,7 @@ Project Link: [https://github.com/Meez25/PartitionCreator](https://github.com/Me
 * [Font Awesome](https://fontawesome.com)
 * [React Icons](https://react-icons.github.io/react-icons/search)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">retour en haut</a>)</p>
 
 
 
