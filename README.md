@@ -167,6 +167,7 @@ Project Link: [https://github.com/Meez25/PartitionCreator](https://github.com/Me
 
 * [Choose an Open Source License](https://choosealicense.com)
 * [Img Shields](https://shields.io)
+* [Template README](https://github.com/othneildrew/Best-README-Template/)
 
 <p align="right">(<a href="#readme-top">retour en haut</a>)</p>
 
