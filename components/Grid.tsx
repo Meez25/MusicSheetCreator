@@ -1,22 +1,22 @@
 import { useState } from "react";
 
-const ColorList = [
-  "fill-green-600",
-  "fill-red-500",
-  "fill-blue-300",
-  "fill-yellow-300",
-  "fill-pink-300",
-  "fill-purple-400",
-  "fill-orange-500",
-  "stroke-green-600",
-  "stroke-red-500",
-  "stroke-blue-300",
-  "stroke-yellow-300",
-  "stroke-pink-300",
-  "stroke-purple-400",
-  "stroke-orange-500",
-  "stroke-2",
-]
+// const ColorList = [
+//   "fill-green-600",
+//   "fill-red-500",
+//   "fill-blue-300",
+//   "fill-yellow-300",
+//   "fill-pink-300",
+//   "fill-purple-400",
+//   "fill-orange-500",
+//   "stroke-green-600",
+//   "stroke-red-500",
+//   "stroke-blue-300",
+//   "stroke-yellow-300",
+//   "stroke-pink-300",
+//   "stroke-purple-400",
+//   "stroke-orange-500",
+//   "stroke-2",
+// ]
 
 const Note: React.FC<{ color: string }> = ({ color }) => {
   let formattedColor = color;
