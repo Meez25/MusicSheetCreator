@@ -4,7 +4,7 @@ type ButtonsProps = {
   selectColor: (color: string) => void;
 }
 
-export const Buttons: React.FC<ButtonsProps> = ({ fill, color, selectColor }) => {
+export const ColoredButtons: React.FC<ButtonsProps> = ({ fill, color, selectColor }) => {
 
   const handleOnClick = () => {
     selectColor(color)

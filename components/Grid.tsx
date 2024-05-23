@@ -24,7 +24,7 @@ const Note: React.FC<{ color: string }> = ({ color }) => {
     formattedColor = color.replace("border-", "fill-");
     return (
       <svg className={`${formattedColor} z-10 flex-none`} width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="24" cy="24" rx="24" ry="20" className={formattedColor} />
+        <ellipse cx="24" cy="24" rx="23" ry="19" className={formattedColor} stroke="black" />
         <circle cx="24" cy="24" r="15" fill="white" />
       </svg>
     )
@@ -33,7 +33,7 @@ const Note: React.FC<{ color: string }> = ({ color }) => {
     formattedColor = color.replace("bg-", "fill-");
     return (
       <svg className={`${formattedColor} z-10 flex-none`} width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="24" cy="24" rx="24" ry="20" />
+        <ellipse cx="24" cy="24" rx="23" ry="20" stroke="black" />
       </svg>
     )
   }
