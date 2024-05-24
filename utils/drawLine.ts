@@ -1,3 +1,4 @@
+"use client"
 export const drawLine = ({ ctx, start, end, color = "black" }:
   { ctx: CanvasRenderingContext2D, start: { x: number, y: number }, end: { x: number, y: number }, color?: string }) => {
   ctx.beginPath();
