@@ -121,7 +121,10 @@ Utilisez cette application pour créer des partitions de musique colorées pour 
 
 - [x] Refactoriser l'utilisation des couleurs
 - [x] Migrer sur canvas
-- [ ] Ajouter la possibilité d'ajouté d'autres portées
+- [x] Ajouter la possibilité d'ajouter d'autres portées
+- [ ] Ajouter la possibilité de changer la clé
+- [ ] Ajouter la possibilité de changer le tempo
+- [ ] Rendre ça un peu plus joli
 
 <p align="right">(<a href="#readme-top">retour en haut</a>)</p>
 
