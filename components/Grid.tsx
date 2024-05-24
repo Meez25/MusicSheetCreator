@@ -1,54 +1,9 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 import { drawLine } from "@/utils/drawLine";
 import useWindowDimensions from "@/hooks/useWindowDimensions";
-
-// const Note: React.FC<{ color: string }> = ({ color }) => {
-//   let formattedColor = color;
-//   if (color.startsWith("border-")) {
-//     formattedColor = color.replace("border-", "fill-");
-//     return (
-//       <svg className={`${formattedColor} z-10 flex-none`} width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-//         <ellipse cx="24" cy="24" rx="23" ry="19" className={formattedColor} stroke="black" />
-//         <circle cx="24" cy="24" r="15" fill="white" />
-//       </svg>
-//     )
-//   }
-//   else if (color.startsWith("bg-")) {
-//     formattedColor = color.replace("bg-", "fill-");
-//     return (
-//       <svg className={`${formattedColor} z-10 flex-none`} width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-//         <ellipse cx="24" cy="24" rx="23" ry="20" stroke="black" />
-//       </svg>
-//     )
-//   }
-// }
-//
-// const Cell: React.FC<{ borderBottom?: boolean, selectColor: string }> = ({ borderBottom, selectColor }) => {
-//   const [clicked, setClicked] = useState<boolean>(false);
-//   const [assignedColor, setAssignedColor] = useState<string>("");
-//
-//   const handleOnClick = () => {
-//     if (!selectColor) {
-//       return;
-//     }
-//     setClicked(!clicked);
-//     setAssignedColor(selectColor);
-//   };
-//
-//   return (
-//     <div
-//       onClick={handleOnClick}
-//       className="relative h-6 w-6 border box-border flex items-center justify-center"
-//     >
-//       {borderBottom && <div className="absolute box-content bg-black min-h-[2px] w-6"></div>}
-//       {clicked &&
-//         <Note color={assignedColor} />
-//       }
-//
-//     </div>
-//   );
-// };
+import { findClosestSquare } from "@/utils/findClosestSquare";
+import { Note } from "@/types/types";
 
 const drawStaff = (ctx: CanvasRenderingContext2D, spaceBetweenTwoLineInStaff: number, width: number, numberOfSection: number) => {
   const middle = numberOfSection / 2;
@@ -67,7 +22,19 @@ const drawGrid = (ctx: CanvasRenderingContext2D, spaceBetweenTwoLineInStaff: num
   }
 }
 
-export const Grid: React.FC<{ selectedColor: string, height: number, numberOfSection: number }> = ({ height, numberOfSection }) => {
+const drawNote = (ctx: CanvasRenderingContext2D, x: number, y: number, note: Note) => {
+  ctx.beginPath();
+  ctx.arc(x, y, 20, 0, 2 * Math.PI);
+  if (note.full) {
+    ctx.fillStyle = note.color;
+  } else {
+    ctx.strokeStyle = note.color;
+    ctx.lineWidth = 4;
+  }
+  note.full ? ctx.fill() : ctx.stroke();
+}
+
+export const Grid: React.FC<{ selectedNote: Note, height: number, numberOfSection: number }> = ({ selectedNote, height, numberOfSection }) => {
   const { width } = useWindowDimensions();
   const canvas = useRef<HTMLCanvasElement>(null);
   const spaceBetweenTwoLineInStaff = height / numberOfSection;
@@ -84,11 +51,10 @@ export const Grid: React.FC<{ selectedColor: string, height: number, numberOfSec
   }, [width, height, spaceBetweenTwoLineInStaff, numberOfSection]);
 
   const handleOnClick = (e: React.MouseEvent<HTMLCanvasElement>) => {
-    const x = e.nativeEvent.offsetX;
-    const y = e.nativeEvent.offsetY;
-    canvas.current?.getContext("2d")?.beginPath();
-    canvas.current?.getContext("2d")?.arc(x, y, 10, 0, 2 * Math.PI);
-    canvas.current?.getContext("2d")?.stroke()
+    const clickX = e.nativeEvent.offsetX;
+    const clickY = e.nativeEvent.offsetY;
+    const { x, y } = findClosestSquare({ clickX, clickY, squareSize: spaceBetweenTwoLineInStaff / 2 });
+    drawNote(canvas.current?.getContext("2d")!, x, y, selectedNote);
   }
 
   return (

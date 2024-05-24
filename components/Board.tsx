@@ -2,17 +2,18 @@
 import { useState } from "react";
 
 import { Grid } from "./Grid";
-import { SelectedColor } from "./SelectedColor";
-import { ColorPicker } from "./ColorPicker";
+import { SelectedNote } from "./SelectedNote";
+import { NotePicker } from "./NotePicker";
+import { Note } from "@/types/types";
 
 export const Board: React.FC = () => {
-  const [selectedColor, setSelectedColor] = useState<string>("");
+  const [selectedNote, setSelectedNote] = useState<Note>({ full: true, color: "black" });
 
   return (
     <>
-      <Grid selectedColor={selectedColor} height={500} numberOfSection={10} />
-      {selectedColor && <SelectedColor color={selectedColor} />}
-      <ColorPicker setSelectedColor={setSelectedColor} />
+      <Grid selectedNote={selectedNote} height={600} numberOfSection={10} />
+      {selectedNote && <SelectedNote note={selectedNote} />}
+      <NotePicker setSelectedNote={setSelectedNote} />
     </>
   );
 }
