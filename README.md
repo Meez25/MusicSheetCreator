@@ -93,7 +93,7 @@ Voici ce que vous pouvez faire avec cette application:
 
 1. Cloner le repo
    ```sh
-   git clone https://github.com/Meez25/PartitionCreator.git
+   git clone https://github.com/Meez25/MusicSheetCreator.git
    ```
 2. Installer les packages
    ```sh
@@ -158,7 +158,7 @@ Distribué sous la licence MIT. Voir `LICENSE.txt` pour plus d'informations.
 
 Yann BRONNER - [@LinkedIn](https://www.linkedin.com/in/yannbronner/)
 
-Project Link: [https://github.com/Meez25/PartitionCreator](https://github.com/Meez25/PartitionCreator)
+Project Link: [https://github.com/Meez25/MusicSheetCreator](https://github.com/Meez25/MusicSheetCreator)
 
 <p align="right">(<a href="#readme-top">retour en haut</a>)</p>
 
@@ -176,16 +176,16 @@ Project Link: [https://github.com/Meez25/PartitionCreator](https://github.com/Me
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/Meez25/PartitionCreator.svg?style=for-the-badge
-[contributors-url]: https://github.com/Meez25/PartitionCreator/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Meez25/PartitionCreator.svg?style=for-the-badge
-[forks-url]: https://github.com/Meez25/PartitionCreator/network/members
-[stars-shield]: https://img.shields.io/github/stars/Meez25/PartitionCreator.svg?style=for-the-badge
-[stars-url]: https://github.com/Meez25/PartitionCreator/stargazers
-[issues-shield]: https://img.shields.io/github/issues/Meez25/PartitionCreator.svg?style=for-the-badge
-[issues-url]: https://github.com/Meez25/PartitionCreator/issues
-[license-shield]: https://img.shields.io/github/license/Meez25/PartitionCreator.svg?style=for-the-badge
-[license-url]: https://github.com/Meez25/PartitionCreator/blob/main/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/Meez25/MusicSheetCreator.svg?style=for-the-badge
+[contributors-url]: https://github.com/Meez25/MusicSheetCreator/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/Meez25/MusicSheetCreator.svg?style=for-the-badge
+[forks-url]: https://github.com/Meez25/MusicSheetCreator/network/members
+[stars-shield]: https://img.shields.io/github/stars/Meez25/MusicSheetCreator.svg?style=for-the-badge
+[stars-url]: https://github.com/Meez25/MusicSheetCreator/stargazers
+[issues-shield]: https://img.shields.io/github/issues/Meez25/MusicSheetCreator.svg?style=for-the-badge
+[issues-url]: https://github.com/Meez25/MusicSheetCreator/issues
+[license-shield]: https://img.shields.io/github/license/Meez25/MusicSheetCreator.svg?style=for-the-badge
+[license-url]: https://github.com/Meez25/MusicSheetCreator/blob/main/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/yannbronner/
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white

@@ -6,8 +6,8 @@ import { Analytics } from "@vercel/analytics/react"
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Créateur de partition colorées",
-  description: "Créer des partitions colorées en ligne",
+  title: "Créateur de partitions colorées",
+  description: "Créer des partitions colorées en ligne, gratuitement. Pratique pour les enfants et les débutants en musique."
 };
 
 export default function RootLayout({
