@@ -50,8 +50,9 @@ import useWindowDimensions from "@/hooks/useWindowDimensions";
 //   );
 // };
 
-const drawStaff = (ctx: CanvasRenderingContext2D, spaceBetweenTwoLineInStaff: number, width: number) => {
-  for (let i = 3; i <= 7; i++) {
+const drawStaff = (ctx: CanvasRenderingContext2D, spaceBetweenTwoLineInStaff: number, width: number, numberOfSection: number) => {
+  const middle = numberOfSection / 2;
+  for (let i = middle - 2; i <= middle + 2; i++) {
     drawLine({ ctx, start: { x: 0, y: i * spaceBetweenTwoLineInStaff }, end: { x: width, y: i * spaceBetweenTwoLineInStaff } });
   }
 }
@@ -66,10 +67,10 @@ const drawGrid = (ctx: CanvasRenderingContext2D, spaceBetweenTwoLineInStaff: num
   }
 }
 
-export const Grid: React.FC<{ selectedColor: string, height: number }> = ({ height }) => {
+export const Grid: React.FC<{ selectedColor: string, height: number, numberOfSection: number }> = ({ height, numberOfSection }) => {
   const { width } = useWindowDimensions();
   const canvas = useRef<HTMLCanvasElement>(null);
-  const spaceBetweenTwoLineInStaff = height / 10;
+  const spaceBetweenTwoLineInStaff = height / numberOfSection;
 
 
   useEffect(() => {
@@ -78,14 +79,13 @@ export const Grid: React.FC<{ selectedColor: string, height: number }> = ({ heig
       return;
     }
     drawGrid(ctx, spaceBetweenTwoLineInStaff, width, height);
-    drawStaff(ctx, spaceBetweenTwoLineInStaff, width);
+    drawStaff(ctx, spaceBetweenTwoLineInStaff, width, numberOfSection);
 
-  }, [width, height, spaceBetweenTwoLineInStaff]);
+  }, [width, height, spaceBetweenTwoLineInStaff, numberOfSection]);
 
   const handleOnClick = (e: React.MouseEvent<HTMLCanvasElement>) => {
     const x = e.nativeEvent.offsetX;
     const y = e.nativeEvent.offsetY;
-    console.log(x, y);
     canvas.current?.getContext("2d")?.beginPath();
     canvas.current?.getContext("2d")?.arc(x, y, 10, 0, 2 * Math.PI);
     canvas.current?.getContext("2d")?.stroke()

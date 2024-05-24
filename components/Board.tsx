@@ -10,7 +10,7 @@ export const Board: React.FC = () => {
 
   return (
     <>
-      <Grid selectedColor={selectedColor} height={500} />
+      <Grid selectedColor={selectedColor} height={500} numberOfSection={10} />
       {selectedColor && <SelectedColor color={selectedColor} />}
       <ColorPicker setSelectedColor={setSelectedColor} />
     </>
