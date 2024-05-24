@@ -50,38 +50,37 @@ import useWindowDimensions from "@/hooks/useWindowDimensions";
 //   );
 // };
 
+const drawStaff = (ctx: CanvasRenderingContext2D, spaceBetweenTwoLineInStaff: number, width: number) => {
+  for (let i = 3; i <= 7; i++) {
+    drawLine({ ctx, start: { x: 0, y: i * spaceBetweenTwoLineInStaff }, end: { x: width, y: i * spaceBetweenTwoLineInStaff } });
+  }
+}
+
+const drawGrid = (ctx: CanvasRenderingContext2D, spaceBetweenTwoLineInStaff: number, width: number, height: number) => {
+  const space = spaceBetweenTwoLineInStaff / 2;
+  for (let i = space / 2; i < width; i += space) {
+    drawLine({ ctx, start: { x: i, y: 0 }, end: { x: i, y: height }, color: "lightgray" });
+  }
+  for (let i = space / 2; i < height; i += space) {
+    drawLine({ ctx, start: { x: 0, y: i }, end: { x: width, y: i }, color: "lightgray" });
+  }
+}
 
 export const Grid: React.FC<{ selectedColor: string, height: number }> = ({ height }) => {
   const { width } = useWindowDimensions();
   const canvas = useRef<HTMLCanvasElement>(null);
+  const spaceBetweenTwoLineInStaff = height / 10;
 
-  const drawStaff = (ctx: CanvasRenderingContext2D, height: number, width: number) => {
-    const space = height / 10
-    drawLine({ ctx, start: { x: 0, y: 3 * space }, end: { x: width, y: 3 * space } });
-    drawLine({ ctx, start: { x: 0, y: 4 * space }, end: { x: width, y: 4 * space } });
-    drawLine({ ctx, start: { x: 0, y: 5 * space }, end: { x: width, y: 5 * space } });
-    drawLine({ ctx, start: { x: 0, y: 6 * space }, end: { x: width, y: 6 * space } });
-    drawLine({ ctx, start: { x: 0, y: 7 * space }, end: { x: width, y: 7 * space } });
-  }
-
-  const drawGrid = (ctx: CanvasRenderingContext2D, height: number, width: number) => {
-    const space = height / 20
-    for (let i = space / 2; i < width; i += space) {
-      drawLine({ ctx, start: { x: i, y: 0 }, end: { x: i, y: height }, color: "lightgray" });
-    }
-    for (let i = space / 2; i < height; i += space) {
-      drawLine({ ctx, start: { x: 0, y: i }, end: { x: width, y: i }, color: "lightgray" });
-    }
-  }
 
   useEffect(() => {
     const ctx = canvas.current?.getContext("2d");
     if (!ctx) {
       return;
     }
-    drawGrid(ctx, height, width);
-    drawStaff(ctx, height, width);
-  }, [width, height]);
+    drawGrid(ctx, spaceBetweenTwoLineInStaff, width, height);
+    drawStaff(ctx, spaceBetweenTwoLineInStaff, width);
+
+  }, [width, height, spaceBetweenTwoLineInStaff]);
 
   const handleOnClick = (e: React.MouseEvent<HTMLCanvasElement>) => {
     const x = e.nativeEvent.offsetX;
