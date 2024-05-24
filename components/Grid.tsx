@@ -8,7 +8,7 @@ import { Note } from "@/types/types";
 const drawStaff = (ctx: CanvasRenderingContext2D, spaceBetweenTwoLineInStaff: number, width: number, numberOfSection: number) => {
   const middle = numberOfSection / 2;
   for (let i = middle - 2; i <= middle + 2; i++) {
-    drawLine({ ctx, start: { x: 0, y: i * spaceBetweenTwoLineInStaff }, end: { x: width, y: i * spaceBetweenTwoLineInStaff } });
+    drawLine({ ctx, start: { x: 0, y: i * spaceBetweenTwoLineInStaff }, end: { x: width, y: i * spaceBetweenTwoLineInStaff }, lineWidth: 2 });
   }
 }
 
@@ -24,20 +24,26 @@ const drawGrid = (ctx: CanvasRenderingContext2D, spaceBetweenTwoLineInStaff: num
 
 const drawNote = (ctx: CanvasRenderingContext2D, x: number, y: number, note: Note) => {
   ctx.beginPath();
-  ctx.ellipse(x, y, 20, 30, 55 * Math.PI / 180, 0, 2 * Math.PI);
 
   if (note.full) {
+    ctx.ellipse(x, y, 20, 30, 55 * Math.PI / 180, 0, 2 * Math.PI);
     ctx.fillStyle = note.color;
     ctx.fill();
+    ctx.lineWidth = 2;
+    ctx.strokeStyle = "black";
+    ctx.stroke();
   } else {
+    ctx.ellipse(x, y, 16, 30, 55 * Math.PI / 180, 0, 2 * Math.PI);
     ctx.strokeStyle = note.color;
-    ctx.lineWidth = 6;
+    ctx.lineWidth = 10;
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.ellipse(x, y, 20, 34, 55 * Math.PI / 180, 0, 2 * Math.PI);
+    ctx.strokeStyle = "black";
+    ctx.lineWidth = 2;
     ctx.stroke();
   }
 
-  ctx.lineWidth = 2;
-  ctx.strokeStyle = "black";
-  ctx.stroke();
 }
 
 export const Grid: React.FC<{ selectedNote: Note, height: number, numberOfSection: number }> = ({ selectedNote, height, numberOfSection }) => {
@@ -94,6 +100,7 @@ export const Grid: React.FC<{ selectedNote: Note, height: number, numberOfSectio
       height={height}
       width={width}
       onClick={(e) => handleOnClick(e)}
+      className="border-2 border-grey my-8"
     >
     </canvas>
   )

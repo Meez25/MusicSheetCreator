@@ -119,8 +119,9 @@ Utilisez cette application pour créer des partitions de musique colorées pour 
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Refactoriser l'utilisation des couleurs
-- [ ] Migrer sur canvas
+- [x] Refactoriser l'utilisation des couleurs
+- [x] Migrer sur canvas
+- [ ] Ajouter la possibilité d'ajouté d'autres portées
 
 <p align="right">(<a href="#readme-top">retour en haut</a>)</p>
 

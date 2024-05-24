@@ -11,7 +11,7 @@ const borderColors = ["border-blue-300", "border-red-500", "border-yellow-300", 
 export const NotePicker: React.FC<NotePickerProps> = ({ setSelectedNote }) => {
 
   return (
-    <>
+    <div>
       <h2 className="text-2xl text-center my-5">Choisissez une couleur</h2>
       <div className="flex flex-row justify-center my-5 gap-1">
         {bgColors.map((color, i) => {
@@ -26,6 +26,6 @@ export const NotePicker: React.FC<NotePickerProps> = ({ setSelectedNote }) => {
           <ColoredButtons key={i} color={color} fill={false} selectNote={setSelectedNote} />
         ))}
       </div>
-    </>
+    </div>
   )
 }
