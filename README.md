@@ -120,6 +120,7 @@ Utilisez cette application pour créer des partitions de musique colorées pour 
 ## Roadmap
 
 - [ ] Refactoriser l'utilisation des couleurs
+- [ ] Migrer sur canvas
 
 <p align="right">(<a href="#readme-top">retour en haut</a>)</p>
 
