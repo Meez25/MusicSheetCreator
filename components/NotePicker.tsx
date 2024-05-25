@@ -12,8 +12,8 @@ export const NotePicker: React.FC<NotePickerProps> = ({ setSelectedNote }) => {
 
   return (
     <div>
-      <h2 className="text-2xl text-center my-5">Choisissez une couleur</h2>
-      <div className="flex flex-row justify-center my-5 gap-1">
+      <h2 className="text-2xl text-center my-2">Choisissez une couleur</h2>
+      <div className="flex flex-row justify-center my-2 gap-1">
         {bgColors.map((color, i) => {
           return (
             <ColoredButtons key={i} fill color={color} selectNote={setSelectedNote} />

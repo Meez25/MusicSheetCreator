@@ -1,4 +1,3 @@
-"use client"
 import { useState } from "react";
 
 import { Grid } from "./Grid";
@@ -11,10 +10,12 @@ export const Board: React.FC<{ numberOfStaff: number }> = ({ numberOfStaff }) =>
 
   return (
     <section>
-      {Array(numberOfStaff).fill("").map((_, i) => (
-        <Grid key={i} selectedNote={selectedNote} height={400} numberOfSection={8} />
-      ))}
-      <div className="sticky bottom-0 inset-x-0 max-w-max mx-auto bg-white p-5 border border-black">
+      <div className="flex flex-col mb-60">
+        {Array(numberOfStaff).fill("").map((_, i) => (
+          <Grid key={i} selectedNote={selectedNote} height={400} numberOfSection={8} />
+        ))}
+      </div>
+      <div className="fixed bottom-4 inset-x-0 max-w-max mx-auto bg-white p-2 border border-black">
         {selectedNote && <SelectedNote note={selectedNote} />}
         <NotePicker setSelectedNote={setSelectedNote} />
       </div>
