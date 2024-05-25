@@ -12,9 +12,9 @@ export const Board: React.FC<{ numberOfStaff: number }> = ({ numberOfStaff }) =>
   return (
     <section>
       {Array(numberOfStaff).fill("").map((_, i) => (
-        <Grid key={i} selectedNote={selectedNote} height={500} numberOfSection={8} />
+        <Grid key={i} selectedNote={selectedNote} height={400} numberOfSection={8} />
       ))}
-      <div className="sticky bottom-10 inset-x-0 max-w-max mx-auto bg-white p-5 border border-black">
+      <div className="sticky bottom-0 inset-x-0 max-w-max mx-auto bg-white p-5 border border-black">
         {selectedNote && <SelectedNote note={selectedNote} />}
         <NotePicker setSelectedNote={setSelectedNote} />
       </div>

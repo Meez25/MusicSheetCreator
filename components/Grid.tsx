@@ -26,19 +26,19 @@ const drawNote = (ctx: CanvasRenderingContext2D, x: number, y: number, note: Not
   ctx.beginPath();
 
   if (note.full) {
-    ctx.ellipse(x, y, 20, 30, 55 * Math.PI / 180, 0, 2 * Math.PI);
+    ctx.ellipse(x, y, 15, 25, 55 * Math.PI / 180, 0, 2 * Math.PI);
     ctx.fillStyle = note.color;
     ctx.fill();
     ctx.lineWidth = 2;
     ctx.strokeStyle = "black";
     ctx.stroke();
   } else {
-    ctx.ellipse(x, y, 16, 30, 55 * Math.PI / 180, 0, 2 * Math.PI);
+    ctx.ellipse(x, y, 13, 23, 55 * Math.PI / 180, 0, 2 * Math.PI);
     ctx.strokeStyle = note.color;
     ctx.lineWidth = 10;
     ctx.stroke();
     ctx.beginPath();
-    ctx.ellipse(x, y, 20, 34, 55 * Math.PI / 180, 0, 2 * Math.PI);
+    ctx.ellipse(x, y, 17, 27, 55 * Math.PI / 180, 0, 2 * Math.PI);
     ctx.strokeStyle = "black";
     ctx.lineWidth = 2;
     ctx.stroke();
